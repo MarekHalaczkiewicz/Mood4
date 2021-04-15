@@ -1,4 +1,4 @@
-import Homepage from "./components/Homepage/Homepage";
+import Homepage from "./pages/Homepage";
 import logo from "./assets/Logo.svg";
 
 const App = () => {

@@ -1,5 +1,5 @@
 import "./Homepage.css";
-import icons from "../../assets/Icons.svg";
+import icons from "../assets/Icons.svg";
 
 const Homepage = () => {
   return (
