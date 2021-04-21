@@ -5,14 +5,14 @@ const SuggestionButtons = (props) => {
 
   return (
     <div className="suggestion-buttons">
-      {interests.map((interest, index) => {
+      {interests.map((interest) => {
         return (
           <input
             type="button"
             className={interest.toggled ? "button active" : "button"}
-            key={index}
+            key={interest.id}
             value={interest.value}
-            onClick={() => toggleActive(interest.value)}
+            onClick={() => toggleActive(interest.id)}
           />
         );
       })}
