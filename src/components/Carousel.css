@@ -21,7 +21,6 @@
   transition: all 0.4s;
 }
 .carousel-over {
-  font-family: "Zen Dots", cursive;
   padding: 7px 15px;
   position: absolute;
   transform: translate(-50%, 0);
