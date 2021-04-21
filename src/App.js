@@ -2,6 +2,7 @@ import Homepage from "./pages/Homepage";
 import ResultPage from "./pages/ResultPage";
 import logo from "./assets/Logo.svg";
 import AddThisButton from "./components/AddThisButton";
+import FooterSuggestions from "./components/FooterSuggestions";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       {/* <Homepage /> */}
       <ResultPage />
       <AddThisButton />
+      <FooterSuggestions />
     </>
   );
 };
