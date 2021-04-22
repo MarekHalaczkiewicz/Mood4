@@ -4,7 +4,7 @@ import "./Carousel.css";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
 
-const Carousel = ({ movieData, cocktailData, musicData }) => {
+const Carousel = ({ movieData, cocktailData, spotifyData }) => {
   const [imageClicked, setImageClicked] = useState(false);
 
   const [status, setStatus] = useState(0);
@@ -99,19 +99,41 @@ const Carousel = ({ movieData, cocktailData, musicData }) => {
               );
             })
           : status === 1
-          ? musicData.map((slide, index) => {
+          ? spotifyData.map((slide, index) => {
               return (
                 <div
+                  onClick={() => setImageClicked(!imageClicked)}
                   className={index === current ? "slide active" : "slide"}
                   key={index}
                 >
                   {index === current && (
                     <img
-                      src={slide.image}
+                      src={slide.album.images[0].url}
                       alt="Music"
-                      className="carousel-img"
+                      className={
+                        imageClicked
+                          ? "carousel-img carousel-img-deactive"
+                          : "carousel-img"
+                      }
                     />
                   )}
+                  <div
+                    className={
+                      imageClicked
+                        ? "carousel-over carousel-over-active"
+                        : "carousel-over"
+                    }
+                  >
+                    <h3>{slide.name}</h3>
+                    {console.log(slide)}
+
+                    <p>
+                      Go to the{" "}
+                      <a target="_blank" href={slide.external_urls.spotify}>
+                        track!
+                      </a>
+                    </p>
+                  </div>
                 </div>
               );
             })
