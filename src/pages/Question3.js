@@ -1,5 +1,6 @@
 import "./Questions.css";
 import "./Fonts.css";
+import { Link } from "react-router-dom";
 
 const Question3 = () => {
   return (
@@ -8,11 +9,21 @@ const Question3 = () => {
         Your plans for today?
       </button>
       <div className="option-container">
-        <button>Chilling</button>
-        <button>Party</button>
-        <button>Dating</button>
-        <button>Spend time with my family</button>
-        <button>Other</button>
+        <button>
+          <Link to="/Question4">Chilling</Link>
+        </button>
+        <button>
+          <Link to="/Question4">Party</Link>
+        </button>
+        <button>
+          <Link to="/Question4">Dating</Link>
+        </button>
+        <button>
+          <Link to="/Question4">Spend time with my family</Link>
+        </button>
+        <button>
+          <Link to="/Question4">Other</Link>
+        </button>
       </div>
     </div>
   );

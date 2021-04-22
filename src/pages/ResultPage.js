@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
 import AddThisButton from "../components/AddThisButton";
 import FooterSuggestions from "../components/FooterSuggestions";
+import { Link } from "react-router-dom";
 
 const ResultPage = () => {
   const [tokenSpotify, setTokenSpotify] = useState(null);
@@ -56,14 +57,11 @@ const ResultPage = () => {
   }, [tokenSpotify]);
 
   return (
-
     <Carousel
       movieData={movieData}
       cocktailData={cocktailData}
       spotifyData={spotifyData}
     />
-
-
   );
 };
 

@@ -1,5 +1,6 @@
 import "./Homepage.css";
 import icons from "../assets/Icons.svg";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -10,7 +11,10 @@ const Homepage = () => {
         us a little bit more about yourself, and get the perfect recommendation
         based on your mood!
       </p>
-      <button className="btn centering">Let's Start</button>
+
+      <button className="btn centering">
+        <Link to="/Question1">Let's start!</Link>
+      </button>
     </>
   );
 };
