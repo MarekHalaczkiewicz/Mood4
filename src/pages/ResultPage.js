@@ -1,6 +1,8 @@
 import { MovieData, MusicData } from "../components/CarouselData";
 import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
+import AddThisButton from "../components/AddThisButton";
+import FooterSuggestions from "../components/FooterSuggestions";
 
 const ResultPage = () => {
   const [cocktailData, setCoctailData] = useState([]);
@@ -20,11 +22,15 @@ const ResultPage = () => {
     setCoctailData(cocktail);
   }, []);
   return (
-    <Carousel
-      movieData={movieData}
-      cocktailData={cocktailData}
-      musicData={musicData}
-    />
+    <>
+      <Carousel
+        movieData={movieData}
+        cocktailData={cocktailData}
+        musicData={musicData}
+      />
+      <AddThisButton />
+      <FooterSuggestions />
+    </>
   );
 };
 
