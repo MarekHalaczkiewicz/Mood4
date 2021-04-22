@@ -1,5 +1,5 @@
 import React from "react";
-import "./Carousel.css";
+import "./FooterSuggestions.css";
 
 function giveMeMore() {
   alert("Adding more options");

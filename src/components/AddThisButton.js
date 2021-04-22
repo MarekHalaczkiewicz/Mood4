@@ -1,5 +1,5 @@
 import React from "react";
-import "./Carousel.css";
+import "./AddThisButton.css";
 
 function addingSelection() {
   alert("Selection added");
@@ -8,7 +8,7 @@ function addingSelection() {
 const AddThisButton = () => {
   return (
     <div>
-      <button className="add-button" onClick={addingSelection}>
+      <button className="add-button centering" onClick={addingSelection}>
         Add This to my final selection
       </button>
     </div>
