@@ -8,8 +8,8 @@
   position: absolute;
   transform: translate(-50%, 0);
   left: 50%;
-  width: 190px;
-  height: 280px;
+  width: 230px;
+  height: 270px;
   border-radius: 5px;
   box-shadow: 3px 5px 5px rgb(0, 0, 0);
   visibility: visible;
@@ -25,8 +25,8 @@
   position: absolute;
   transform: translate(-50%, 0);
   left: 50%;
-  width: 190px;
-  height: 280px;
+  width: 230px;
+  height: 270px;
   border-radius: 5px;
   box-shadow: 3px 5px 5px rgb(0, 0, 0);
   background-color: #bee3db;
@@ -78,13 +78,13 @@
   .carousel-img {
     transform: translate(-50%, 0);
     left: 50%;
-    width: 342px;
+    width: 450px;
     height: 500px;
   }
   .carousel-over {
     transform: translate(-50%, 0);
     left: 50%;
-    width: 342px;
+    width: 450px;
     height: 500px;
   }
   .right-arrow {

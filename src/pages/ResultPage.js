@@ -1,4 +1,3 @@
-import { MovieData } from "../components/CarouselData";
 import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
 import AddThisButton from "../components/AddThisButton";
@@ -9,11 +8,21 @@ const ResultPage = () => {
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
-  const [movieData] = useState(MovieData);
+  const [movieData, setMovieData] = useState(null);
+  console.log(movieData);
   const spotify = {
     ClientId: "1453030ebed0443a8ac7ed202f4b3a15",
     ClientSecret: "cf930bd9cca045c6bd3be556c8ae0d80",
   };
+
+  useEffect(() => {
+    fetch(
+      "https://api.themoviedb.org/3/movie/trending/all/day?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&language=en-US"
+    )
+      .then((res) => res.json())
+      .then((data) => setMovieData(data.results));
+  }, []);
+
   useEffect(() => {
     const cocktail = [];
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
@@ -57,11 +66,15 @@ const ResultPage = () => {
   }, [tokenSpotify]);
 
   return (
-    <Carousel
-      movieData={movieData}
-      cocktailData={cocktailData}
-      spotifyData={spotifyData}
-    />
+    <>
+      <Carousel
+        movieData={movieData}
+        cocktailData={cocktailData}
+        spotifyData={spotifyData}
+      />
+      <AddThisButton />
+      <FooterSuggestions />
+    </>
   );
 };
 
