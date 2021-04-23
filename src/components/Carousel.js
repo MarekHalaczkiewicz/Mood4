@@ -141,7 +141,6 @@ const Carousel = ({ movieData, cocktailData, spotifyData }) => {
                     }
                   >
                     <h3>{slide.name}</h3>
-                    {console.log(slide)}
 
                     <p>
                       Go to the{" "}
