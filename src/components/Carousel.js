@@ -85,16 +85,32 @@ const Carousel = ({ movieData, cocktailData, spotifyData }) => {
           ? movieData.map((slide, index) => {
               return (
                 <div
+                  onClick={() => setImageClicked(!imageClicked)}
                   className={index === current ? "slide active" : "slide"}
                   key={index}
                 >
                   {index === current && (
                     <img
-                      src={slide.image}
+                      src={`https://image.tmdb.org/t/p/original/${slide.poster_path}`}
                       alt="Movie"
-                      className="carousel-img"
+                      className={
+                        imageClicked
+                          ? "carousel-img carousel-img-deactive"
+                          : "carousel-img"
+                      }
                     />
                   )}
+                  <div
+                    className={
+                      imageClicked
+                        ? "carousel-over carousel-over-active"
+                        : "carousel-over"
+                    }
+                  >
+                    <h3>{slide.original_title}</h3>
+
+                    <p>{slide.overview}</p>
+                  </div>
                 </div>
               );
             })
