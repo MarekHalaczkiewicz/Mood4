@@ -7,7 +7,6 @@
   align-items: center;
 }
 .carousel-img {
-  margin-top: 2%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,8 +59,6 @@
 }
 
 .left-arrow {
-  width: 40px;
-  height: 40px;
   z-index: 10;
   user-select: none;
 }
@@ -73,29 +70,4 @@
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-}
-@media screen and (min-height: 800px) {
-  .slider {
-    height: 45%;
-  }
-}
-@media screen and (min-height: 1000px) {
-  .slider {
-    height: 40%;
-  }
-}
-@media screen and (min-height: 1200px) {
-  .slider {
-    height: 35%;
-  }
-}
-@media screen and (min-height: 1400px) {
-  .slider {
-    height: 30%;
-  }
-}
-@media screen and (min-height: 1600px) {
-  .slider {
-    height: 25%;
-  }
 }

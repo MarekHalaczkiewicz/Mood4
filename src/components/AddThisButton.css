@@ -1,13 +1,16 @@
 .add-button {
-  margin-top: 5%;
-  width: 210px;
-  height: 40px;
-  background: linear-gradient(180deg, #ffd6ba 0%, rgba(255, 255, 255, 0) 100%),
+  width: 85%;
+  height: 45px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 214, 186, 0.8) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
     #bee3db;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 20px;
   font-weight: 600;
   font-size: 15px;
-  color: #240fa6;
+  color: rgba(36, 15, 166, 0.85);
   border: none;
 }

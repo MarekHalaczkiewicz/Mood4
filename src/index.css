@@ -8,13 +8,13 @@ body {
   background: linear-gradient(180deg, #bee3db 0%, rgba(255, 255, 255, 0) 100%),
     rgba(255, 214, 186, 0.3);
   background-repeat: no-repeat;
-
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
-
 a {
   text-decoration: none;
 }
@@ -25,14 +25,13 @@ input {
   font-family: inherit;
 }
 .main-container {
-  width: 97vw;
-  height: 100vh;
+  width: 95vw;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-
 @media screen and (min-width: 600px) {
   .main-container {
     width: 60vw;
@@ -43,9 +42,19 @@ input {
     width: 50vw;
   }
 }
+@media screen and (min-height: 800px) {
+  .main-container {
+    height: 80vh;
+  }
+}
 @media screen and (min-width: 1000px) {
   .main-container {
     width: 40vw;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .main-container {
+    height: 60vh;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -53,13 +62,28 @@ input {
     width: 30vw;
   }
 }
+@media screen and (min-height: 1200px) {
+  .main-container {
+    height: 50vh;
+  }
+}
 @media screen and (min-width: 1500px) {
   .main-container {
     width: 20vw;
   }
 }
+@media screen and (min-height: 1500px) {
+  .main-container {
+    height: 40vh;
+  }
+}
 @media screen and (min-width: 2000px) {
   .main-container {
     width: 10vw;
+  }
+}
+@media screen and (min-height: 2000px) {
+  .main-container {
+    height: 30vh;
   }
 }
