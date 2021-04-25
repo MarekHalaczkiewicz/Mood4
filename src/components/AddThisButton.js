@@ -7,11 +7,9 @@ function addingSelection() {
 
 const AddThisButton = () => {
   return (
-    <div>
-      <button className="add-button centering" onClick={addingSelection}>
-        Add This to my final selection
-      </button>
-    </div>
+    <button className="add-button" onClick={addingSelection}>
+      Add This to my final selection
+    </button>
   );
 };
 

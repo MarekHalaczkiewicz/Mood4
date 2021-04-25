@@ -1,13 +1,14 @@
 .suggestion-buttons {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
 }
 .button {
+  margin: 7px 0;
   width: 100px;
   height: 30px;
   border-radius: 20px;
-  margin: 0 5px;
   border: none;
   text-align: center;
   line-height: 0%;
@@ -18,18 +19,4 @@
 .active {
   background: linear-gradient(180deg, #89b0ae 0%, rgba(255, 255, 255, 0) 100%),
     rgba(255, 214, 186, 0.8);
-}
-
-@media (min-width: 700px) {
-  .suggestion-buttons {
-    display: flex;
-    justify-content: space-around;
-  }
-  .button {
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
-    margin: 0 5px;
-    font-size: 32px;
-  }
 }

@@ -1,30 +1,26 @@
 import "./Questions.css";
-import "./Fonts.css";
+
 import { Link } from "react-router-dom";
 
 const Question1 = () => {
   return (
-    <div>
-      <button className="question-button centering">
-        Tell us about yourself. I'm..
+    <div className="option-container">
+      <button className="question-button">Tell us about yourself. I'm..</button>
+      <button className="answer-button">
+        <Link to="/Question2">By myself</Link>
       </button>
-      <div className="option-container">
-        <button>
-          <Link to="/Question2">By myself</Link>
-        </button>
-        <button>
-          <Link to="/Question2">With my partner</Link>
-        </button>
-        <button>
-          <Link to="/Question2">With my kids</Link>
-        </button>
-        <button>
-          <Link to="/Question2">With friends</Link>
-        </button>
-        <button>
-          <Link to="/Question2">Other</Link>
-        </button>
-      </div>
+      <button className="answer-button">
+        <Link to="/Question2">With my partner</Link>
+      </button>
+      <button className="answer-button">
+        <Link to="/Question2">With my kids</Link>
+      </button>
+      <button className="answer-button">
+        <Link to="/Question2">With friends</Link>
+      </button>
+      <button className="answer-button">
+        <Link to="/Question2">Other</Link>
+      </button>
     </div>
   );
 };

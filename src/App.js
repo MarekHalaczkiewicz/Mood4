@@ -9,8 +9,8 @@ import Question4 from "./pages/Question4";
 
 const App = () => {
   return (
-    <>
-      <img className="logo centering" src={logo} alt="logo" />
+    <div className="main-container">
+      <img className="logo" src={logo} alt="logo" />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/Question1" component={Question1} />
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/Question4" component={Question4} />
         <Route path="/ResultPage" component={ResultPage} />
       </Switch>
-    </>
+    </div>
   );
 };
 export default App;

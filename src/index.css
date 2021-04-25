@@ -8,15 +8,58 @@ body {
   background: linear-gradient(180deg, #bee3db 0%, rgba(255, 255, 255, 0) 100%),
     rgba(255, 214, 186, 0.3);
   background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0 2%;
-  overflow: hidden;
+
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.centering {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 a {
   text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+input {
+  font-family: inherit;
+}
+.main-container {
+  width: 97vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .main-container {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  .main-container {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main-container {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-container {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .main-container {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .main-container {
+    width: 10vw;
+  }
 }

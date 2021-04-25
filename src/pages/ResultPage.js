@@ -66,9 +66,7 @@ const ResultPage = () => {
 
   return (
     <>
-      <button className="question-button centering marginbutton">
-        Your answers guided us to...
-      </button>
+      <button className="question-button">Your answers guided us to...</button>
       <Carousel
         movieData={movieData}
         cocktailData={cocktailData}
