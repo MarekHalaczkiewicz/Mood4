@@ -8,15 +8,82 @@ body {
   background: linear-gradient(180deg, #bee3db 0%, rgba(255, 255, 255, 0) 100%),
     rgba(255, 214, 186, 0.3);
   background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: 0 2%;
-  overflow: hidden;
-}
-.centering {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100vw;
 }
 a {
   text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+input {
+  font-family: inherit;
+}
+.main-container {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .main-container {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  .main-container {
+    width: 50vw;
+  }
+}
+@media screen and (min-height: 800px) {
+  .main-container {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main-container {
+    width: 40vw;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .main-container {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-container {
+    width: 30vw;
+  }
+}
+@media screen and (min-height: 1200px) {
+  .main-container {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .main-container {
+    width: 20vw;
+  }
+}
+@media screen and (min-height: 1500px) {
+  .main-container {
+    height: 40vh;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .main-container {
+    width: 15vw;
+  }
+}
+@media screen and (min-height: 2000px) {
+  .main-container {
+    height: 30vh;
+  }
 }

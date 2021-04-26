@@ -1,28 +1,16 @@
 .add-button {
-  width: 250px;
-  height: 43px;
-  left: calc(50% - 250px / 2 + 0.5px);
-  margin-top: 0;
-  background: linear-gradient(180deg, #ffd6ba 0%, rgba(255, 255, 255, 0) 100%),
+  width: 85%;
+  height: 45px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 214, 186, 0.8) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
     #bee3db;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 20px;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  align-items: center;
-  text-align: center;
-  color: #240fa6;
+  font-size: 15px;
+  color: rgba(36, 15, 166, 0.85);
   border: none;
-}
-@media (min-width: 700px) {
-  .add-button {
-    margin-top: 40%;
-    width: 400px;
-    height: 50px;
-    border-radius: 20px;
-    font-size: 20px;
-  }
 }
