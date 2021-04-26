@@ -79,7 +79,7 @@ input {
 }
 @media screen and (min-width: 2000px) {
   .main-container {
-    width: 10vw;
+    width: 15vw;
   }
 }
 @media screen and (min-height: 2000px) {

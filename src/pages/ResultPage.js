@@ -19,7 +19,7 @@ const ResultPage = () => {
     const randomNumber2 = Math.floor(Math.random() * 18);
     console.log(randomNumber2);
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=18`
+      `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=16`
     )
       .then((res) => res.json())
       .then((data) => setMovieData(data.results.slice(randomNumber2)));
