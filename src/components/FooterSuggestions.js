@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FooterSuggestions.css";
 
 function giveMeMore() {
@@ -11,7 +12,8 @@ const FooterSuggestions = () => {
   return (
     <div className="suggestion-footer">
       <button onClick={giveMeMore}>Give me more</button>
-      <button onClick={goToFinal}>I'm done here</button>
+      <button><Link to="/FinalPage">I'm done here</Link></button>
+
     </div>
   );
 };

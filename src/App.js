@@ -6,7 +6,7 @@ import Question1 from "./pages/Question1";
 import Question2 from "./pages/Question2";
 import Question3 from "./pages/Question3";
 import Question4 from "./pages/Question4";
-
+import FinalPage from "./pages/Finalpage";
 const App = () => {
   return (
     <div className="main-container">
@@ -18,7 +18,9 @@ const App = () => {
         <Route path="/Question3" component={Question3} />
         <Route path="/Question4" component={Question4} />
         <Route path="/ResultPage" component={ResultPage} />
+        <Route path="/FinalPage" component={FinalPage} />
       </Switch>
+
     </div>
   );
 };
