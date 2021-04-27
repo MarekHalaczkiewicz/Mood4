@@ -19,6 +19,12 @@
   visibility: visible;
   opacity: 1;
 }
+.more-info {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+}
 .carousel-img-deactive {
   visibility: hidden;
   opacity: 0;
@@ -39,6 +45,7 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s;
+  z-index: 2;
 }
 .carousel-over h3 {
   text-align: center;

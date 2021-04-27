@@ -3,6 +3,7 @@ import SuggestionButtons from "./SugestionButtons";
 import "./Carousel.css";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
+import MoreInfo from "../assets/MoreInfo.svg";
 
 const Carousel = ({ movieData, cocktailData, spotifyData }) => {
   const [imageClicked, setImageClicked] = useState(false);
@@ -47,6 +48,7 @@ const Carousel = ({ movieData, cocktailData, spotifyData }) => {
           alt="left-arrow"
           onClick={prevSlide}
         />
+        <img className="more-info" src={MoreInfo} alt="more-info" />
 
         {status === 2
           ? cocktailData.map((slide, index) => {
