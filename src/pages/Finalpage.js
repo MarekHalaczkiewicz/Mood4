@@ -1,13 +1,14 @@
 import StarRating from "../components/StarRating";
 import "./FinalPage.css";
+import TakeAgainButton from "../components/TakeAgainButton";
 
 const FinalPage = () => {
   return (
     <>
       <button className="question-button">Your final selection...</button>
       <div className="suggestion-buttons">
-        <input type="button" className="button active" value="Music" />
         <input type="button" className="button active" value="Movie" />
+        <input type="button" className="button active" value="Music" />
         <input type="button" className="button active" value="Drink" />
       </div>
       <div className="img-finalpage-container">
@@ -32,7 +33,8 @@ const FinalPage = () => {
         expereince with Mood4 !
       </p>
 
-      <StarRating />
+      <StarRating className="pleaserate" />
+      <TakeAgainButton className="take-again-button" />
     </>
   );
 };
