@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import ResultPage from "./pages/ResultPage";
@@ -8,6 +9,11 @@ import Question3 from "./pages/Question3";
 import Question4 from "./pages/Question4";
 import FinalPage from "./pages/Finalpage";
 const App = () => {
+  const [myPreferences] = useState({
+    movie: "",
+    music: "",
+    drink: "",
+  });
   return (
     <div className="main-container">
       <img className="logo" src={logo} alt="logo" />
@@ -17,10 +23,15 @@ const App = () => {
         <Route path="/Question2" component={Question2} />
         <Route path="/Question3" component={Question3} />
         <Route path="/Question4" component={Question4} />
-        <Route path="/ResultPage" component={ResultPage} />
-        <Route path="/FinalPage" component={FinalPage} />
+        <Route
+          path="/ResultPage"
+          component={() => <ResultPage myPreferences={myPreferences} />}
+        />
+        <Route
+          path="/FinalPage"
+          component={() => <FinalPage myPreferences={myPreferences} />}
+        />
       </Switch>
-
     </div>
   );
 };

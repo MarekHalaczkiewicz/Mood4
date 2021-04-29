@@ -1,32 +1,18 @@
 import { useState } from "react";
-import SuggestionButtons from "./SugestionButtons";
 import "./Carousel.css";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
 import MoreInfo from "../assets/MoreInfo.svg";
 
-const Carousel = ({ movieData, cocktailData, spotifyData }) => {
+const Carousel = ({
+  movieData,
+  cocktailData,
+  spotifyData,
+  status,
+  current,
+  setCurrent,
+}) => {
   const [imageClicked, setImageClicked] = useState(false);
-
-  const [status, setStatus] = useState(0);
-  const [interests, setInterests] = useState([
-    { id: 0, value: "Movie", toggled: true },
-    { id: 1, value: "Music", toggled: false },
-    { id: 2, value: "Drink", toggled: false },
-  ]);
-
-  const toggleActive = (id) => {
-    const newInterests = interests.map((interest) => {
-      if (interest.id === id) {
-        return { ...interest, toggled: true };
-      } else {
-        return { ...interest, toggled: false };
-      }
-    });
-    setInterests(newInterests);
-    setStatus(id);
-  };
-  const [current, setCurrent] = useState(0);
   const length = 3;
 
   const nextSlide = () => {
@@ -39,8 +25,6 @@ const Carousel = ({ movieData, cocktailData, spotifyData }) => {
 
   return (
     <>
-      <SuggestionButtons interests={interests} toggleActive={toggleActive} />
-
       <div className="slider">
         <img
           className="left-arrow"

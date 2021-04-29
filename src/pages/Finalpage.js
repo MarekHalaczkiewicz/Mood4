@@ -2,7 +2,7 @@ import StarRating from "../components/StarRating";
 import "./FinalPage.css";
 import TakeAgainButton from "../components/TakeAgainButton";
 
-const FinalPage = () => {
+const FinalPage = ({ myPreferences }) => {
   return (
     <>
       <button className="question-button">Your final selection...</button>
@@ -13,17 +13,29 @@ const FinalPage = () => {
       </div>
       <div className="img-finalpage-container">
         <img
-          src="https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg"
+          src={
+            myPreferences.movie === ""
+              ? "https://image.slidesharecdn.com/what-if-i-am-not-chosen-130417123636-phpapp02/95/what-if-i-am-not-chosen-1-638.jpg?cb=1366202401"
+              : myPreferences.movie
+          }
           alt=""
           className="img-finalpage"
         />
         <img
-          src="https://images-na.ssl-images-amazon.com/images/I/61YK%2BvhHSOL._SX355_.jpg"
+          src={
+            myPreferences.music === ""
+              ? "https://image.slidesharecdn.com/what-if-i-am-not-chosen-130417123636-phpapp02/95/what-if-i-am-not-chosen-1-638.jpg?cb=1366202401"
+              : myPreferences.music
+          }
           alt=""
           className="img-finalpage"
         />
         <img
-          src="https://www.gourmet-magazin.de/fileadmin/_processed_/d/d/csm_pink-lady-7_de87e393d9.jpg"
+          src={
+            myPreferences.drink === ""
+              ? "https://image.slidesharecdn.com/what-if-i-am-not-chosen-130417123636-phpapp02/95/what-if-i-am-not-chosen-1-638.jpg?cb=1366202401"
+              : myPreferences.drink
+          }
           alt=""
           className="img-finalpage"
         />

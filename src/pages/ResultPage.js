@@ -1,28 +1,45 @@
 import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
-import AddThisButton from "../components/AddThisButton";
 import FooterSuggestions from "../components/FooterSuggestions";
+import SuggestionButtons from "../components/SugestionButtons";
+import "./ResultPage.css";
 
-const ResultPage = () => {
+const ResultPage = ({ myPreferences }) => {
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
   const [movieData, setMovieData] = useState([]);
+  const [status, setStatus] = useState(0);
+  const [current, setCurrent] = useState(0);
 
   const spotify = {
     ClientId: "1453030ebed0443a8ac7ed202f4b3a15",
     ClientSecret: "cf930bd9cca045c6bd3be556c8ae0d80",
   };
+  const [interests, setInterests] = useState([
+    { id: 0, value: "Movie", toggled: true },
+    { id: 1, value: "Music", toggled: false },
+    { id: 2, value: "Drink", toggled: false },
+  ]);
+  const toggleActive = (id) => {
+    const newInterests = interests.map((interest) => {
+      if (interest.id === id) {
+        return { ...interest, toggled: true };
+      } else {
+        return { ...interest, toggled: false };
+      }
+    });
+    setInterests(newInterests);
+    setStatus(id);
+  };
 
   useEffect(() => {
     const randomNumber = Math.floor(Math.random() * 50) + 1;
-    const randomNumber2 = Math.floor(Math.random() * 18);
-    console.log(randomNumber2);
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=18`
     )
       .then((res) => res.json())
-      .then((data) => setMovieData(data.results.slice(randomNumber2)));
+      .then((data) => setMovieData(data.results));
   }, []);
 
   useEffect(() => {
@@ -66,16 +83,30 @@ const ResultPage = () => {
         .then((data) => setSpotifyData(data.tracks));
     }
   }, [tokenSpotify]);
-
+  const handleMyPreferences = () => {
+    if (status === 0) {
+      myPreferences.movie = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
+    } else if (status === 1) {
+      myPreferences.music = spotifyData[current].album.images[0].url;
+    } else if (status === 2) {
+      myPreferences.drink = cocktailData[current].strDrinkThumb;
+    }
+  };
   return (
     <>
       <button className="question-button">Your answers guided us to...</button>
+      <SuggestionButtons interests={interests} toggleActive={toggleActive} />
       <Carousel
         movieData={movieData}
         cocktailData={cocktailData}
         spotifyData={spotifyData}
+        status={status}
+        current={current}
+        setCurrent={setCurrent}
       />
-      <AddThisButton />
+      <button onClick={() => handleMyPreferences()} className="add-button">
+        Add This to my final selection
+      </button>
       <FooterSuggestions />
     </>
   );
