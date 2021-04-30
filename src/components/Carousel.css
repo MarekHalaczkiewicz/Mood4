@@ -31,7 +31,7 @@
   transition: all 0.4s;
 }
 .carousel-over {
-  padding: 7px 15px;
+  padding: 7px 5px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -51,9 +51,17 @@
   text-align: center;
   margin: 10px;
 }
-.carousel-over p {
+.carousel-over h5 {
   text-align: center;
+  margin: 10px;
+}
+.carousel-over p {
+  text-align: justify;
   margin: 20px;
+}
+.vote-star {
+  text-align: center;
+  color: #ffc107;
 }
 .carousel-over-active {
   visibility: visible;
