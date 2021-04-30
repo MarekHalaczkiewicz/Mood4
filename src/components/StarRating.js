@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./StarRating.css";
 
@@ -9,9 +9,8 @@ const StarRating = () => {
     <div>
       {[...Array(5)].map((star, i) => {
         const ratingValue = i + 1;
-
         return (
-          <label>
+          <label key={i}>
             <input
               type="radio"
               name="rating"
@@ -21,7 +20,7 @@ const StarRating = () => {
             <FaStar
               className="star"
               color={ratingValue <= rating ? "#ffc107" : "#023e8a"}
-              size={30}
+              size={35}
             />
           </label>
         );

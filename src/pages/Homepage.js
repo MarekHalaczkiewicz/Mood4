@@ -10,9 +10,9 @@ const Homepage = () => {
         Get the perfect recommendation based on your mood!
       </p>
 
-      <button className="btn-homepage">
-        <Link to="/Question1">Let's start!</Link>
-      </button>
+      <Link to="/Question1">
+        <button className="btn-homepage">Let's start!</button>
+      </Link>
     </>
   );
 };

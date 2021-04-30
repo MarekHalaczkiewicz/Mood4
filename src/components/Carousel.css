@@ -86,3 +86,36 @@
   opacity: 1;
   transition-duration: 1s;
 }
+.strDrink {
+  text-align: center;
+  font-size: 15px;
+}
+.ingredients-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.ingredients > div {
+  margin: 3px 0;
+  font-size: 12px;
+  text-align: left;
+}
+.meausures {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.meausures > div {
+  text-align: right;
+  margin: 3px 0;
+  font-size: 12px;
+}
+.strInstructions {
+  font-size: 13px;
+  margin-top: 25px;
+}
