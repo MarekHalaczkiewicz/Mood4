@@ -131,7 +131,6 @@ const Carousel = ({
             })
           : status === 1
           ? spotifyData.map((slide, index) => {
-              console.log(slide);
               return (
                 <div
                   onClick={() => setImageClicked(!imageClicked)}
@@ -156,9 +155,17 @@ const Carousel = ({
                         : "carousel-over"
                     }
                   >
-                    <h3>"{slide.name}" by</h3>
+                    <h3>
+                      "{slide.name}" by
+                      {slide.artists.map((artist, index) => {
+                        return <div key={index}>{artist.name}</div>;
+                      })}
+                    </h3>
+                    <figure>
+                      <audio controls src={slide.preview_url}></audio>
+                    </figure>
 
-                    <p>
+                    <div className="gotoTrack">
                       Go to the{" "}
                       <a
                         target="_blank"
@@ -167,7 +174,7 @@ const Carousel = ({
                       >
                         track!
                       </a>
-                    </p>
+                    </div>
                   </div>
                 </div>
               );
