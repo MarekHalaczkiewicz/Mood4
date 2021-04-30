@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Carousel.css";
+import { FaStar } from "react-icons/fa";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
 import MoreInfo from "../assets/MoreInfo.svg";
@@ -93,15 +94,22 @@ const Carousel = ({
                         : "carousel-over"
                     }
                   >
-                    <h3>{slide.original_title}</h3>
+                    <h3>"{slide.original_title}"</h3>
+                    <h5>Release Date: {slide.release_date}</h5>
 
                     <p>{slide.overview}</p>
+                    <h5>
+                      <FaStar className="vote-star" size={20} />
+                      <br></br>
+                      {slide.vote_average}/10
+                    </h5>
                   </div>
                 </div>
               );
             })
           : status === 1
           ? spotifyData.map((slide, index) => {
+              console.log(slide);
               return (
                 <div
                   onClick={() => setImageClicked(!imageClicked)}
@@ -126,7 +134,7 @@ const Carousel = ({
                         : "carousel-over"
                     }
                   >
-                    <h3>{slide.name}</h3>
+                    <h3>"{slide.name}" by</h3>
 
                     <p>
                       Go to the{" "}

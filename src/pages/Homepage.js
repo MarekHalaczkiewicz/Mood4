@@ -7,9 +7,7 @@ const Homepage = () => {
     <>
       <img src={icons} alt="icons" />
       <p className="welcome-text">
-        We're here to help you to feel the way you would like to feel. Just tell
-        us a little bit more about yourself, and get the perfect recommendation
-        based on your mood!
+        Get the perfect recommendation based on your mood!
       </p>
 
       <button className="btn-homepage">
