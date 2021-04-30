@@ -22,7 +22,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .answer-button {
-  width: 180px;
+  width: 250px;
   height: 50px;
   background: linear-gradient(180deg, #ffd6ba 0%, rgba(255, 255, 255, 0) 100%),
     rgba(255, 214, 186, 0.8);

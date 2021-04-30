@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 const Question3 = () => {
   return (
     <>
-      <button className="question-button">Your plans for today?</button>
+      <button className="question-button">How would you like to feel?</button>
       <div className="option-container">
         <button className="answer-button">
-          <Link to="/Question4">Chilling</Link>
+          <Link to="/ResultPage">Relaxed 🎧</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question4">Party</Link>
+          <Link to="/ResultPage">Party-mood for me 💃🏻🕺🏻</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question4">Dating</Link>
+          <Link to="/ResultPage">Romantic vibes only 💖</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question4">Spend time with my family</Link>
+          <Link to="/ResultPage">Cheered up 🤗</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question4">Other</Link>
+          <Link to="/ResultPage">Other</Link>
         </button>
       </div>
     </>

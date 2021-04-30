@@ -7,9 +7,10 @@
 }
 
 .img-finalpage {
-  width: 30%;
-  height: 85%;
-  margin: 0 5px;
+  width: 31%;
+  height: 80%;
+  object-fit: cover;
+  margin: 0 3px;
 }
 
 .pleaserate {

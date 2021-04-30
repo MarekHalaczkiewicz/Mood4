@@ -10,16 +10,16 @@ const Question2 = () => {
       </button>
       <div className="option-container">
         <button className="answer-button">
-          <Link to="/Question3">I'm at home</Link>
+          <Link to="/Question3">I am at home 🏡</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question3">I'm outside</Link>
+          <Link to="/Question3">I’m outside 🏕</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question3">Friend's place</Link>
+          <Link to="/Question3">Friend’s place 🏘</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question3">At my workspace</Link>
+          <Link to="/Question3">I’m at my workplace 🏢</Link>
         </button>
         <button className="answer-button">
           <Link to="/Question3">Other</Link>

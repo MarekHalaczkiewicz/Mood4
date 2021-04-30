@@ -14,10 +14,12 @@ const Question1 = () => {
   };
   return (
     <>
-      <button className="question-button">Tell us about yourself. I'm..</button>
+      <button className="question-button">
+        What are your plans for today?
+      </button>
       <div className="option-container">
         <button className="answer-button">
-          <Link to="/Question2">By myself</Link>
+          <Link to="/Question2">Finally, some me-time 🤓</Link>
         </button>
         <button
           onClick={() => {
@@ -25,13 +27,13 @@ const Question1 = () => {
           }}
           className="answer-button"
         >
-          <Link to="/Question2">With my partner</Link>
+          <Link to="/Question2">Hang out with my friends 😍</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question2">With my kids</Link>
+          <Link to="/Question2">Spend time with my partner 💞</Link>
         </button>
         <button className="answer-button">
-          <Link to="/Question2">With friends</Link>
+          <Link to="/Question2">Family time 👨‍👩‍👧‍👦</Link>
         </button>
         <button className="answer-button">
           <Link to="/Question2">Other</Link>
