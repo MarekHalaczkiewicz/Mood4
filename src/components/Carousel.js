@@ -60,9 +60,31 @@ const Carousel = ({
                         : "carousel-over"
                     }
                   >
-                    <h3>{slide.strDrink}</h3>
+                    <h4 className="strDrink">{slide.strDrink}</h4>
+                    <div className="ingredients-container">
+                      <div className="ingredients">
+                        {Object.values(slide)
+                          .slice(17, 32)
+                          .map((strEl, index) => {
+                            return (
+                              strEl !== null && <div key={index}>{strEl}</div>
+                            );
+                          })}
+                      </div>
+                      <div className="meausures">
+                        {Object.values(slide)
+                          .slice(32, 47)
+                          .map((strEl, index) => {
+                            return (
+                              strEl !== null && <div key={index}>{strEl}</div>
+                            );
+                          })}
+                      </div>
+                    </div>
 
-                    <p>{slide.strInstructions}</p>
+                    <div className="strInstructions">
+                      {slide.strInstructions}
+                    </div>
                   </div>
                 </div>
               );
@@ -130,7 +152,11 @@ const Carousel = ({
 
                     <p>
                       Go to the{" "}
-                      <a target="_blank" href={slide.external_urls.spotify}>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={slide.external_urls.spotify}
+                      >
                         track!
                       </a>
                     </p>

@@ -1,8 +1,6 @@
 import "./SuggestionButtons.css";
 
-const SuggestionButtons = (props) => {
-  const { interests, toggleActive } = props;
-
+const SuggestionButtons = ({ interests, toggleActive }) => {
   return (
     <div className="suggestion-buttons">
       {interests.map((interest) => {

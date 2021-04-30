@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import StarRating from "../components/StarRating";
 import "./FinalPage.css";
-import TakeAgainButton from "../components/TakeAgainButton";
 
 const FinalPage = ({ myPreferences }) => {
   return (
@@ -46,7 +46,9 @@ const FinalPage = ({ myPreferences }) => {
       </p>
 
       <StarRating className="pleaserate" />
-      <TakeAgainButton className="take-again-button" />
+      <Link to="/">
+        <button className="take-again">Start Again</button>
+      </Link>
     </>
   );
 };

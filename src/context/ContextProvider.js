@@ -7,7 +7,6 @@ const initialState = {
   question4: "",
 };
 const reducer = (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case "QUESTIONONE_ANSWERED":
       return {

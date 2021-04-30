@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
-import FooterSuggestions from "../components/FooterSuggestions";
 import SuggestionButtons from "../components/SugestionButtons";
 import "./ResultPage.css";
 
@@ -11,7 +11,6 @@ const ResultPage = ({ myPreferences }) => {
   const [movieData, setMovieData] = useState([]);
   const [status, setStatus] = useState(0);
   const [current, setCurrent] = useState(0);
-
   const spotify = {
     ClientId: "1453030ebed0443a8ac7ed202f4b3a15",
     ClientSecret: "cf930bd9cca045c6bd3be556c8ae0d80",
@@ -34,12 +33,13 @@ const ResultPage = ({ myPreferences }) => {
   };
 
   useEffect(() => {
+    const randomNumber2 = Math.floor(Math.random() * 18);
     const randomNumber = Math.floor(Math.random() * 50) + 1;
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=18`
     )
       .then((res) => res.json())
-      .then((data) => setMovieData(data.results));
+      .then((data) => setMovieData(data.results.slice(randomNumber2)));
   }, []);
 
   useEffect(() => {
@@ -107,7 +107,18 @@ const ResultPage = ({ myPreferences }) => {
       <button onClick={() => handleMyPreferences()} className="add-button">
         Add This to my final selection
       </button>
-      <FooterSuggestions />
+      <div className="suggestion-footer">
+        <button
+          onClick={() => window.location.reload()}
+          className="suggestion-footer-btn"
+        >
+          Give me more
+        </button>
+
+        <Link to="/FinalPage">
+          <button className="suggestion-footer-btn">I'm done here</button>
+        </Link>
+      </div>
     </>
   );
 };
