@@ -3,7 +3,6 @@ import "./Carousel.css";
 import { FaStar } from "react-icons/fa";
 import leftArrow from "../assets/left-arrow.svg";
 import rightArrow from "../assets/right-arrow.svg";
-import MoreInfo from "../assets/MoreInfo.svg";
 
 const Carousel = ({
   movieData,
@@ -33,8 +32,13 @@ const Carousel = ({
           alt="left-arrow"
           onClick={prevSlide}
         />
-        <img className="more-info" src={MoreInfo} alt="more-info" />
-
+        <div
+          className={
+            imageClicked ? "more-info more-info-deactive" : "more-info"
+          }
+        >
+          Click for more info
+        </div>
         {status === 2
           ? cocktailData.map((slide, index) => {
               return (

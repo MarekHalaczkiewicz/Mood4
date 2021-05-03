@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import UserContext from "../context/ContextProvider";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import SuggestionButtons from "../components/SugestionButtons";
 import "./ResultPage.css";
 
 const ResultPage = ({ myPreferences }) => {
+  const context = useContext(UserContext);
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
@@ -36,11 +38,11 @@ const ResultPage = ({ myPreferences }) => {
     const randomNumber2 = Math.floor(Math.random() * 18);
     const randomNumber = Math.floor(Math.random() * 50) + 1;
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=18`
+      `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=${context.questionState.question1}`
     )
       .then((res) => res.json())
       .then((data) => setMovieData(data.results.slice(randomNumber2)));
-  }, []);
+  }, [context.questionState.question1]);
 
   useEffect(() => {
     const cocktail = [];
