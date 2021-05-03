@@ -6,21 +6,25 @@ const Question3 = () => {
     <>
       <button className="question-button">How would you like to feel?</button>
       <div className="option-container">
-        <button className="answer-button">
-          <Link to="/ResultPage">Relaxed 🎧</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/ResultPage">Party-mood for me 💃🏻🕺🏻</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/ResultPage">Romantic vibes only 💖</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/ResultPage">Cheered up 🤗</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/ResultPage">Other</Link>
-        </button>
+        <Link to="/ResultPage">
+          <button className="answer-button">Relaxed 🎧</button>
+        </Link>
+
+        <Link to="/ResultPage">
+          <button className="answer-button">Party-mood for me 💃🏻🕺🏻</button>
+        </Link>
+
+        <Link to="/ResultPage">
+          <button className="answer-button">Romantic vibes only 💖</button>
+        </Link>
+
+        <Link to="/ResultPage">
+          <button className="answer-button">Cheered up 🤗</button>
+        </Link>
+
+        <Link to="/ResultPage">
+          <button className="answer-button">Other</button>
+        </Link>
       </div>
     </>
   );

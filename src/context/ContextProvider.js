@@ -4,14 +4,20 @@ const initialState = {
   question1: "",
   question2: "",
   question3: "",
-  question4: "",
 };
 const reducer = (state, action) => {
   switch (action.type) {
     case "QUESTIONONE_ANSWERED":
+      console.log(action.payload);
       return {
         ...state,
         question1: action.payload,
+      };
+    case "QUESTIONTWO_ANSWERED":
+      console.log(action.payload);
+      return {
+        ...state,
+        question2: action.payload,
       };
     default:
       return {

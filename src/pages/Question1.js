@@ -18,26 +18,53 @@ const Question1 = () => {
         What are your plans for today?
       </button>
       <div className="option-container">
-        <button className="answer-button">
-          <Link to="/Question2">Finally, some me-time 🤓</Link>
-        </button>
-        <button
-          onClick={() => {
-            questionOne(context.questionDispatch, "10749");
-          }}
-          className="answer-button"
-        >
-          <Link to="/Question2">Hang out with my friends 😍</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/Question2">Spend time with my partner 💞</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/Question2">Family time 👨‍👩‍👧‍👦</Link>
-        </button>
-        <button className="answer-button">
-          <Link to="/Question2">Other</Link>
-        </button>
+        <Link to="/Question2">
+          <button
+            onClick={() => {
+              questionOne(context.questionDispatch, "28");
+            }}
+            className="answer-button"
+          >
+            Finally, some me-time 🤓
+          </button>
+        </Link>
+
+        <Link to="/Question2">
+          <button
+            onClick={() => {
+              questionOne(context.questionDispatch, "35");
+            }}
+            className="answer-button"
+          >
+            Hang out with my friends 😍
+          </button>
+        </Link>
+
+        <Link to="/Question2">
+          <button
+            onClick={() => {
+              questionOne(context.questionDispatch, "10749");
+            }}
+            className="answer-button"
+          >
+            Spend time with my partner 💞
+          </button>
+        </Link>
+
+        <Link to="/Question2">
+          <button
+            onClick={() => {
+              questionOne(context.questionDispatch, "10751");
+            }}
+            className="answer-button"
+          >
+            Family time 👨‍👩‍👧‍👦
+          </button>
+        </Link>
+
+        <Link to="/Question2">
+          <button className="answer-button">Other</button>
+        </Link>
       </div>
     </>
   );
