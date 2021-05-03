@@ -2,8 +2,7 @@ import { createContext, useReducer } from "react";
 const UserContext = createContext();
 const initialState = {
   question1: "",
-  question2: "",
-  question3: "",
+  question3: { energy: "", dance: "", genre: "" },
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -13,11 +12,11 @@ const reducer = (state, action) => {
         ...state,
         question1: action.payload,
       };
-    case "QUESTIONTWO_ANSWERED":
+    case "QUESTIONTHREE_ANSWERED":
       console.log(action.payload);
       return {
         ...state,
-        question2: action.payload,
+        question3: action.payload,
       };
     default:
       return {

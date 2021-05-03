@@ -1,17 +1,7 @@
-import { useContext } from "react";
-import UserContext from "../context/ContextProvider";
+import { Link } from "react-router-dom";
 import "./Questions.css";
 
-import { Link } from "react-router-dom";
-
 const Question2 = () => {
-  const context = useContext(UserContext);
-  const questionTwo = (dispatch, answer) => {
-    dispatch({
-      type: "QUESTIONTWO_ANSWERED",
-      payload: answer,
-    });
-  };
   return (
     <>
       <button className="question-button">
@@ -19,14 +9,7 @@ const Question2 = () => {
       </button>
       <div className="option-container">
         <Link to="/Question3">
-          <button
-            onClick={() => {
-              questionTwo(context.questionDispatch, "28");
-            }}
-            className="answer-button"
-          >
-            I am at home 🏡
-          </button>
+          <button className="answer-button">I am at home 🏡</button>
         </Link>
 
         <Link to="/Question3">
