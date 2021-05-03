@@ -36,7 +36,7 @@ const Question3 = () => {
               questionThree(context.questionDispatch, {
                 energy: 0.5,
                 dance: 0.5,
-                genre: "electronic",
+                genre: "house",
               });
             }}
             className="answer-button"
@@ -51,7 +51,7 @@ const Question3 = () => {
               questionThree(context.questionDispatch, {
                 energy: 0.4,
                 dance: 0.3,
-                genre: "soul",
+                genre: "romance",
               });
             }}
             className="answer-button"
@@ -66,7 +66,7 @@ const Question3 = () => {
               questionThree(context.questionDispatch, {
                 energy: 0.5,
                 dance: 0.4,
-                genre: "holiday",
+                genre: "happy",
               });
             }}
             className="answer-button"
@@ -79,8 +79,8 @@ const Question3 = () => {
           <button
             onClick={() => {
               questionThree(context.questionDispatch, {
-                energy: 0.7,
-                dance: 0.7,
+                energy: 0.6,
+                dance: 0.5,
                 genre: "work-out",
               });
             }}

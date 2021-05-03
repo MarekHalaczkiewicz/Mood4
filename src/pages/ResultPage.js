@@ -7,13 +7,13 @@ import "./ResultPage.css";
 
 const ResultPage = ({ myPreferences }) => {
   const context = useContext(UserContext);
-  console.log(context.questionState.question3.energy);
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
   const [movieData, setMovieData] = useState([]);
   const [status, setStatus] = useState(0);
   const [current, setCurrent] = useState(0);
+  const [giveMeMore, setGiveMeMore] = useState(true);
   const spotify = {
     ClientId: "1453030ebed0443a8ac7ed202f4b3a15",
     ClientSecret: "cf930bd9cca045c6bd3be556c8ae0d80",
@@ -43,7 +43,7 @@ const ResultPage = ({ myPreferences }) => {
     )
       .then((res) => res.json())
       .then((data) => setMovieData(data.results.slice(randomNumber2)));
-  }, [context.questionState.question1]);
+  }, [context.questionState.question1, giveMeMore]);
 
   useEffect(() => {
     const cocktail = [];
@@ -68,7 +68,7 @@ const ResultPage = ({ myPreferences }) => {
     })
       .then((response) => response.json())
       .then((tokenResponse) => setTokenSpotify(tokenResponse.access_token));
-  }, []);
+  }, [giveMeMore]);
   useEffect(() => {
     if (tokenSpotify !== null) {
       fetch(
@@ -85,7 +85,7 @@ const ResultPage = ({ myPreferences }) => {
         .then((response) => response.json())
         .then((data) => setSpotifyData(data.tracks));
     }
-  }, [tokenSpotify]);
+  }, [tokenSpotify, giveMeMore]);
   const handleMyPreferences = () => {
     if (status === 0) {
       myPreferences.movie = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
@@ -108,18 +108,18 @@ const ResultPage = ({ myPreferences }) => {
         setCurrent={setCurrent}
       />
       <button onClick={() => handleMyPreferences()} className="add-button">
-        Add This to my final selection
+        Choose This!
       </button>
       <div className="suggestion-footer">
         <button
-          onClick={() => window.location.reload()}
+          onClick={() => setGiveMeMore(!giveMeMore)}
           className="suggestion-footer-btn"
         >
-          Give me more
+          More options
         </button>
 
         <Link to="/FinalPage">
-          <button className="suggestion-footer-btn">I'm done here</button>
+          <button className="suggestion-footer-btn">I'm done</button>
         </Link>
       </div>
     </>
