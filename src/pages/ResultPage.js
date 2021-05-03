@@ -7,6 +7,7 @@ import "./ResultPage.css";
 
 const ResultPage = ({ myPreferences }) => {
   const context = useContext(UserContext);
+  console.log(context.questionState.question3.energy);
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
@@ -71,7 +72,7 @@ const ResultPage = ({ myPreferences }) => {
   useEffect(() => {
     if (tokenSpotify !== null) {
       fetch(
-        "https://api.spotify.com/v1/recommendations?limit=3&market=US&seed_genres=pop&min_energy=0.4&min_popularity=50",
+        `https://api.spotify.com/v1/recommendations?limit=3&market=US&seed_genres=${context.questionState.question3.genre}&min_danceability=${context.questionState.question3.dance}&min_energy=${context.questionState.question3.energy}&min_popularity=50`,
         {
           headers: {
             "Content-Type": "application/json",
