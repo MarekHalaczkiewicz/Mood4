@@ -5,8 +5,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, #bee3db 0%, rgba(255, 255, 255, 0) 100%),
-    rgba(255, 214, 186, 0.3);
+  background: linear-gradient(0deg, #24435b, #24435b), rgba(255, 214, 186, 0.3);
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
   display: flex;
