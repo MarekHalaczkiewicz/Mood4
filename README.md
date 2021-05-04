@@ -1,11 +1,23 @@
 # ![Mood4](./src/assets/Logo.svg)
 
+
 # Getting Started with Mood4
+
+# Table of Contents
+1. Introduction
+2. Installation
+3. Technologies
+4. API's
+5. Team
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# 1.
+# Introduction
+
 # The purpose of our application is to help our users to find best combination of movies, music and coctails based on their mood. They need to just answer 3 simple questions.
 
+# 2. 
 # Installation
 
 1. Clone the repo:
@@ -94,3 +106,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+# 3. 
+# Technologies
+   We used Javascript, React,React Router, CSS and fresh cool Beer
+
+
+
+# 4. 
+# API's
+   following API's are used:
+   -  Spotify API:  https://developer.spotify.com/documentation/  web-api/
+   -  Cocktail API: https://www.thecocktaildb.com/api.php 
+   -  Movie API: https://developers.themoviedb.org/
+
+
+
+# 5. 
+# The Team: 
+   Who is Mood4? Here we go: 
+   Agnes, Marek, Orkan and Gordon
