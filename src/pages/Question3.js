@@ -86,7 +86,7 @@ const Question3 = () => {
             }}
             className="answer-button"
           >
-            Energetic
+            Energetic ⚡️
           </button>
         </Link>
       </div>
