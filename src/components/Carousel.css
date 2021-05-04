@@ -109,6 +109,7 @@
 .strDrink {
   text-align: center;
   font-size: 15px;
+  color: black;
 }
 .ingredients-container {
   display: flex;
@@ -119,6 +120,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  color: black;
 }
 .ingredients > div {
   margin: 3px 0;
@@ -129,6 +131,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  color: black;
 }
 .meausures > div {
   text-align: right;
@@ -138,9 +141,11 @@
 .strInstructions {
   font-size: 13px;
   margin-top: 25px;
+  color: black;
 }
 .gotoTrack {
   text-align: center;
   margin-top: 25px;
   font-size: 23px;
+  color: black;
 }

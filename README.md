@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# ![Mood4](./src/assets/Logo.svg)
+
+# Getting Started with Mood4
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# The purpose of our application is to help our users to find best combination of movies, music and coctails based on their mood. They need to just answer 3 simple questions.
+
+# Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/MarekHalaczkiewicz/Mood4
+   ```
+2. Install NPM packages:
+
+   ```sh
+   npm install
+   ```
+
+3. Run the app in the development mode with:
+
+   ```sh
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
+   The page will reload if you make edits.\
+   You will also see any lint errors in the console.
 
 ## Available Scripts
 
