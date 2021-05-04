@@ -130,4 +130,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # 5. 
 # The Team: 
    Who is Mood4? Here we go: 
-   Agnes, Marek, Orkan and Gordon
+   Agnes, Marek, Okan and Gordon
