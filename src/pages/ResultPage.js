@@ -7,6 +7,7 @@ import "./ResultPage.css";
 
 const ResultPage = ({ myPreferences }) => {
   const context = useContext(UserContext);
+  const [message, setMessage] = useState("Choose This!");
   const [tokenSpotify, setTokenSpotify] = useState(null);
   const [spotifyData, setSpotifyData] = useState([]);
   const [cocktailData, setCoctailData] = useState([]);
@@ -38,25 +39,27 @@ const ResultPage = ({ myPreferences }) => {
   useEffect(() => {
     const randomNumber2 = Math.floor(Math.random() * 18);
     const randomNumber = Math.floor(Math.random() * 50) + 1;
+    const cocktail = [];
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=6a389bac75b5a8fdfcfc2e5f478b8c62&sort_by=vote_count.desc&page=${randomNumber}&with_genres=${context.questionState.question1}`
     )
       .then((res) => res.json())
       .then((data) => setMovieData(data.results.slice(randomNumber2)));
-  }, [context.questionState.question1, giveMeMore]);
 
-  useEffect(() => {
-    const cocktail = [];
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then((response) => response.json())
       .then((data) => cocktail.push(data.drinks[0]));
+
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then((response) => response.json())
       .then((data) => cocktail.push(data.drinks[0]));
+
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then((response) => response.json())
       .then((data) => cocktail.push(data.drinks[0]));
+
     setCoctailData(cocktail);
+
     fetch("https://accounts.spotify.com/api/token", {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -68,7 +71,8 @@ const ResultPage = ({ myPreferences }) => {
     })
       .then((response) => response.json())
       .then((tokenResponse) => setTokenSpotify(tokenResponse.access_token));
-  }, [giveMeMore]);
+  }, [context.questionState.question1, giveMeMore]);
+
   useEffect(() => {
     if (tokenSpotify !== null) {
       fetch(
@@ -86,6 +90,12 @@ const ResultPage = ({ myPreferences }) => {
         .then((data) => setSpotifyData(data.tracks));
     }
   }, [tokenSpotify, giveMeMore]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMessage("Choose This!");
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [message]);
   const handleMyPreferences = () => {
     if (status === 0) {
       myPreferences.movie = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
@@ -107,9 +117,16 @@ const ResultPage = ({ myPreferences }) => {
         current={current}
         setCurrent={setCurrent}
       />
-      <button onClick={() => handleMyPreferences()} className="add-button">
-        Choose This!
+      <button
+        onClick={() => {
+          handleMyPreferences();
+          setMessage("Added!");
+        }}
+        className="add-button"
+      >
+        {message}
       </button>
+
       <div className="suggestion-footer">
         <button
           onClick={() => setGiveMeMore(!giveMeMore)}
