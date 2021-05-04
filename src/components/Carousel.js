@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Carousel.css";
 import { FaStar } from "react-icons/fa";
-import leftArrow from "../assets/left-arrow.svg";
-import rightArrow from "../assets/right-arrow.svg";
+import leftArrow from "../assets/left-arrow2.svg";
+import rightArrow from "../assets/right-arrow2.svg";
 
 const Carousel = ({
   movieData,
