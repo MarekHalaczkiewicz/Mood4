@@ -7,13 +7,11 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "QUESTIONONE_ANSWERED":
-      console.log(action.payload);
       return {
         ...state,
         question1: action.payload,
       };
     case "QUESTIONTHREE_ANSWERED":
-      console.log(action.payload);
       return {
         ...state,
         question3: action.payload,
