@@ -65,7 +65,10 @@ const Carousel = ({
                         : "carousel-over"
                     }
                   >
-                    <h4 className="strDrink">{slide.strDrink}</h4>
+                    <div className="strDrink">
+                      <h3>"{slide.strDrink}"</h3>
+                    </div>
+                    <h5>ingredients:</h5>
                     <div className="ingredients-container">
                       <div className="ingredients">
                         {Object.values(slide)
@@ -88,7 +91,7 @@ const Carousel = ({
                     </div>
 
                     <div className="strInstructions">
-                      {slide.strInstructions}
+                      <p>{slide.strInstructions}</p>
                     </div>
                   </div>
                 </div>

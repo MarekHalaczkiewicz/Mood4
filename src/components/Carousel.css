@@ -78,7 +78,7 @@
 }
 .carousel-over p {
   text-align: justify;
-  margin: 20px;
+  margin: 10px;
   color: black;
 }
 .vote-star {
@@ -114,7 +114,7 @@
 .ingredients-container {
   display: flex;
   justify-content: space-between;
-  margin: 25px 0;
+  margin: 10px 0;
 }
 .ingredients {
   display: flex;
@@ -123,9 +123,10 @@
   color: black;
 }
 .ingredients > div {
-  margin: 3px 0;
+  margin: 3px 12px;
   font-size: 12px;
   text-align: left;
+  font-weight: 600;
 }
 .meausures {
   display: flex;
@@ -135,11 +136,12 @@
 }
 .meausures > div {
   text-align: right;
-  margin: 3px 0;
+  margin: 3px 12px;
   font-size: 12px;
+  font-weight: 600;
 }
 .strInstructions {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 25px;
   color: black;
 }
