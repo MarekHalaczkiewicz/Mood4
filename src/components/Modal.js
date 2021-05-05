@@ -15,7 +15,7 @@ const Modal = ({ setShowModal, myPreferences }) => {
       </div>
 
       <div className="modal-section">
-        {myPreferences.movie.img !== "" && (
+        {myPreferences.movie.img !== "" ? (
           <>
             <h3>"{myPreferences.movie.title}"</h3>
             <p>{myPreferences.movie.overview}</p>
@@ -25,10 +25,12 @@ const Modal = ({ setShowModal, myPreferences }) => {
               {myPreferences.movie.vote_average}/10
             </p>
           </>
+        ) : (
+          <div className="no-selection">No movie selected</div>
         )}
       </div>
       <div className="modal-section">
-        {myPreferences.music.img !== "" && (
+        {myPreferences.music.img !== "" ? (
           <>
             <h3>
               "{myPreferences.music.title}" by
@@ -45,10 +47,12 @@ const Modal = ({ setShowModal, myPreferences }) => {
               track!
             </a>
           </>
+        ) : (
+          <div className="no-selection">No music selected</div>
         )}
       </div>
       <div className="modal-section">
-        {myPreferences.drink.img !== "" && (
+        {myPreferences.drink.img !== "" ? (
           <>
             <h3>{myPreferences.drink.title}</h3>
             <h4>ingredients:</h4>
@@ -59,6 +63,8 @@ const Modal = ({ setShowModal, myPreferences }) => {
             </h5>
             <p>{myPreferences.drink.instructions}</p>
           </>
+        ) : (
+          <div className="no-selection">No drink selected</div>
         )}
       </div>
     </div>
