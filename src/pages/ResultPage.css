@@ -1,12 +1,12 @@
 .add-button {
   width: 70%;
   height: 45px;
-  background: #438188;
+  background: #f8ddcb;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 20px;
   font-weight: 600;
   font-size: 15px;
-  color: #f8ddcb;
+  color: #438188;
   border: none;
   cursor: pointer;
 }
