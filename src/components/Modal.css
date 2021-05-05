@@ -42,8 +42,18 @@
   overflow: auto;
   word-wrap: break-word;
 }
+.modal-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.modal-section h5 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .modal-section > p,
 h3 {
   text-align: center;
-  margin: 5px 0;
+  margin: 0px 0;
 }

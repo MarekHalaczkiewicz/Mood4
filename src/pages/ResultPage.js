@@ -101,6 +101,7 @@ const ResultPage = ({ myPreferences }) => {
       myPreferences.movie.img = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
       myPreferences.movie.title = movieData[current].original_title;
       myPreferences.movie.overview = movieData[current].overview;
+      myPreferences.movie.vote_average = movieData[current].vote_average;
     } else if (status === 1) {
       myPreferences.music.img = spotifyData[current].album.images[0].url;
       myPreferences.music.track = spotifyData[current].external_urls.spotify;

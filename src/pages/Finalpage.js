@@ -48,7 +48,7 @@ const FinalPage = ({ myPreferences }) => {
       </div>
       <p className="pleaserate">
         We hope that you will enjoy our recommendations. Please rate your
-        expereince with Mood4 !
+        experience with Mood4 !
       </p>
       {showModal && (
         <Modal myPreferences={myPreferences} setShowModal={setShowModal} />
