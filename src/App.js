@@ -10,10 +10,11 @@ import Question3 from "./pages/Question3";
 import FinalPage from "./pages/Finalpage";
 const App = () => {
   const [myPreferences] = useState({
-    movie: "",
-    music: "",
-    drink: "",
+    movie: { img: "", title: "", overview: "" },
+    music: { img: "", title: "", track: "", artists: [] },
+    drink: { img: "", title: "", ingredients: [], instructions: "" },
   });
+  console.log(myPreferences.drink.img);
   return (
     <div className="main-container">
       <img className="logo" src={logo} alt="logo" />

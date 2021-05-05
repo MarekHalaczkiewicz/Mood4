@@ -29,6 +29,7 @@ figure > audio {
   margin-top: 15px;
 }
 .main-container {
+  position: relative;
   width: 95vw;
   height: 95vh;
   display: flex;
