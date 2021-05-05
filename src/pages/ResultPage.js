@@ -98,12 +98,22 @@ const ResultPage = ({ myPreferences }) => {
   }, [message]);
   const handleMyPreferences = () => {
     if (status === 0) {
-      myPreferences.movie = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
+      myPreferences.movie.img = `https://image.tmdb.org/t/p/original/${movieData[current].poster_path}`;
+      myPreferences.movie.title = movieData[current].original_title;
+      myPreferences.movie.overview = movieData[current].overview;
     } else if (status === 1) {
-      myPreferences.music = spotifyData[current].album.images[0].url;
+      myPreferences.music.img = spotifyData[current].album.images[0].url;
+      myPreferences.music.track = spotifyData[current].external_urls.spotify;
+      myPreferences.music.title = spotifyData[current].name;
+      myPreferences.music.artists = spotifyData[current].artists;
     } else if (status === 2) {
-      myPreferences.drink = cocktailData[current].strDrinkThumb;
+      myPreferences.drink.img = cocktailData[current].strDrinkThumb;
+      myPreferences.drink.ingredients = Object.values(
+        cocktailData[current]
+      ).slice(17, 49);
+      myPreferences.drink.instructions = cocktailData[current].strInstructions;
     }
+    myPreferences.drink.title = cocktailData[current].strDrink;
   };
   return (
     <>
