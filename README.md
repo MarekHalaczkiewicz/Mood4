@@ -114,13 +114,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # 3. 
 # Technologies
-   We used Javascript, React,React Router, CSS and fresh cool Beer
+   We used Javascript, React, React Router, DOM, CSS and some refreshing beers. :)
 
 
 
 # 4. 
 # API's
-   following API's are used:
+   The following API's were used:
    -  Spotify API:  https://developer.spotify.com/documentation/  web-api/
    -  Cocktail API: https://www.thecocktaildb.com/api.php 
    -  Movie API: https://developers.themoviedb.org/
