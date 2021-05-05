@@ -1,4 +1,5 @@
 import "./Modal.css";
+import { FaStar } from "react-icons/fa";
 
 const Modal = ({ setShowModal, myPreferences }) => {
   return (
@@ -18,6 +19,11 @@ const Modal = ({ setShowModal, myPreferences }) => {
           <>
             <h3>"{myPreferences.movie.title}"</h3>
             <p>{myPreferences.movie.overview}</p>
+            <p>
+              <FaStar className="vote-star" size={20} />
+              <br></br>
+              {myPreferences.movie.vote_average}/10
+            </p>
           </>
         )}
       </div>
@@ -46,9 +52,11 @@ const Modal = ({ setShowModal, myPreferences }) => {
           <>
             <h3>{myPreferences.drink.title}</h3>
             <h4>ingredients:</h4>
-            {myPreferences.drink.ingredients.map((strEl, index) => {
-              return strEl !== null && <p key={index}>{strEl}</p>;
-            })}
+            <h5>
+              {myPreferences.drink.ingredients.map((strEl, index) => {
+                return strEl !== null && <p key={index}>{strEl}</p>;
+              })}
+            </h5>
             <p>{myPreferences.drink.instructions}</p>
           </>
         )}

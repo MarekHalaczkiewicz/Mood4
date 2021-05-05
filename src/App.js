@@ -10,7 +10,7 @@ import Question3 from "./pages/Question3";
 import FinalPage from "./pages/Finalpage";
 const App = () => {
   const [myPreferences] = useState({
-    movie: { img: "", title: "", overview: "" },
+    movie: { img: "", title: "", overview: "", vote_average: "" },
     music: { img: "", title: "", track: "", artists: [] },
     drink: { img: "", title: "", ingredients: [], instructions: "" },
   });
